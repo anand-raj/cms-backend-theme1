@@ -1,0 +1,14 @@
+name              = "cms-admin"
+main              = "index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ADMIN_URL  = "https://admin-portal-93k.pages.dev"
+# DEV_ORIGIN: uncomment for local dev only; leave unset in production
+# DEV_ORIGIN = "http://localhost:5173"
+
+# Uses the same D1 database as all other CMS workers (admins table for auth)
+[[d1_databases]]
+binding       = "DB"
+database_name = "cms"
+database_id   = "3d9706db-0a45-4c18-ac40-3b477cb0c915"
