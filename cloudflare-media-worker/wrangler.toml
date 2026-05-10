@@ -6,6 +6,8 @@ compatibility_date = "2025-01-01"
 SITE_URL      = "https://anand-raj.github.io"
 ADMIN_URL     = "https://admin-portal-93k.pages.dev"
 R2_PUBLIC_URL = "https://pub-ef2e502c5f7c4d6d992c8d7758c43027.r2.dev"
+# DEV_ORIGIN: set to "http://localhost:5173" only for local dev; leave unset in production
+# DEV_ORIGIN = "http://localhost:5173"
 
 # Uploads go through the Worker via the MEDIA_BUCKET binding — no R2 API credentials needed.
 

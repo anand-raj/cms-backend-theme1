@@ -25,10 +25,10 @@
 // ---------------------------------------------------------------------------
 
 function corsHeaders(origin, env) {
-  const allowed = [env.SITE_URL, env.ADMIN_URL, 'http://localhost:5173'].filter(Boolean);
-  const allowedOrigin = allowed.includes(origin) ? origin : env.ADMIN_URL;
+  const allowed = [env.SITE_URL, env.ADMIN_URL, env.DEV_ORIGIN].filter(Boolean);
+  if (!allowed.includes(origin)) return {};   // unknown origin — omit CORS header entirely
   return {
-    'Access-Control-Allow-Origin': allowedOrigin,
+    'Access-Control-Allow-Origin': origin,
     'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Access-Control-Max-Age': '86400',
